@@ -1,0 +1,1063 @@
+
+@font-face{
+  font-family:"futura";
+  src:url("../fonts/futura\ medium\ bt.ttf");
+ }
+*{
+  scroll-behavior:smooth;
+  font-family: futura;
+}
+.main {
+  background-image: url("../images/wallpaper.jpg");
+  background-position: center center;
+  /* ovo neradi kod IOS */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/*iphone version */
+_::-webkit-full-page-media, _:future, :root .main {
+  background-attachment: scroll;
+}
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) { 
+    
+        .main { 
+           background-attachment: scroll;
+        }
+    
+}
+@media not all and (min-resolution:.001dpcm) { 
+ 
+      .main { 
+          background-attachment: scroll;
+      
+  }
+}
+
+/* .no-webp .main{
+  background-image: url("../images/wallpaper.jpg");
+}
+.webp .main{
+  background-image: url("../images/wallpaper.webp");
+} */
+.txt-rotate{
+  font-size:33px;
+}
+h1 {
+  color: black;
+  font-size: 55px;
+  line-height: 60px;
+  text-align: center;
+  margin-bottom: 10px;
+  
+}
+h2 {
+  color: black;
+  font-size: 40px;
+  font-weight: 900;
+  margin: 15px 0;
+  text-align: center;
+}
+/* //////////////// first welcome page /////////////////  */
+.body-div{
+  padding:40px;   
+  background-color:white;
+}
+.logo1 {
+  width:84px;
+  height:62px;
+}
+.home_mob{
+  display:block;
+  margin:auto;
+
+}
+.h1-main {
+  color: white;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: left;
+}
+.h2-main {
+  color: white;
+  font-size: 22px;
+  margin-top:20px;
+  text-align: left;
+  line-height:30px;
+}
+.p-main {
+  color: white;
+  font-size: 22px;
+  margin-top: 50px;
+  text-align: center;
+}
+#button-main{
+  margin-top:20px;
+
+}
+
+
+/* https://codepen.io/marcusconnor/pen/QJNvMa */
+.rocker {
+  float:right;
+  
+  position: relative;
+  margin-left: 5px;
+  /*
+  SIZE OF SWITCH
+  ==============
+  All sizes are in em - therefore
+  changing the font-size here
+  will change the size of the switch.
+  See .rocker-small below as example.
+  */
+  font-size: 0.75em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid #5dbcd2;
+}
+
+.rocker-small {
+  font-size: 0.75em; /* Sizes the switch */
+  margin: 1em;
+}
+
+.rocker::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  border: 0.4em solid #5dbcd2;
+  border-bottom: 0;
+  border-radius: 1px;
+}
+
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-left,
+.switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+}
+
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #bd5757;
+  color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+
+.switch-left::before {
+  left: -0.4em;
+}
+
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+
+input:checked + .switch-left {
+  background-color: #4CB04E;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
+/* Keyboard Users */
+input:focus + .switch-left {
+  color: #333;
+}
+
+input:checked:focus + .switch-left {
+  color: #fff;
+}
+
+input:focus + .switch-left + .switch-right {
+  color: #fff;
+}
+
+input:checked:focus + .switch-left + .switch-right {
+  color: #333;
+}
+
+/* //////////////// all img, h1 and p are the same properties ////////////////*/
+
+.how-we-do-it-img,
+.how-does-it-work-img{
+  height: 100px;
+  width: 100px;
+  /* za centrirat element u flexu */
+  display: block;
+  margin: auto;
+}
+.how-we-do-it-img{
+  margin-top:50px;
+
+}
+.how-we-do-it-h1,
+.how-does-it-work-h1 {
+  padding-top: 10px;
+  font-size: 25px;
+  color: #4CB04E;
+  text-align: center;
+  font-weight:900;
+} 
+.how-does-it-work-p{
+  padding:5px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 20px;
+
+}
+.how-we-do-it-p{
+  padding:5px 5px 30px 5px;
+  text-align: center;
+
+  font-size: 20px;
+ 
+}
+
+/* //////////////////////////// how we do it /////////////////////////////// */
+#how-we-do-it {
+}
+
+/* //////////// how does it work ////////////////// */
+
+.how-does-it-work-plus {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+/* img of gif */
+
+.how-does-it-look-img {
+  /* width: 225px;
+  height: 450px; */
+  width:275px;
+  display: block;
+  margin: auto;
+ 
+}
+
+
+
+/* ///////////////// footer /////////////////////// */
+#footer {
+  background-color: #323235;
+
+ 
+
+}
+.logo-footer{
+  /* display:block;
+  margin:auto; */
+  width:84px;
+  height:62px;  
+}
+.footer-p {
+  margin-top:22px;
+  color: white;
+  text-align: center;
+  cursor:pointer;
+ 
+}
+.footer-all-rights{
+  color:white;
+  text-align:right;
+  margin-top:22px;
+}
+/*//////////////////////////// NEWSLETTER /////////////////////////////////// */
+.container-contact{
+  margin-bottom:100px;
+  width: 100%;  
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  padding-top:35px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+.wrap-contact {
+  width: 800px;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  margin-top: 55px;
+  padding: 73px 70px 60px 70px;
+  box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.contact-form-symbol {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #e7e7e7;
+  border-radius: 50%;
+  background: #fff;
+  top: -55px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.contact-form-symbol img {
+  max-width: 49px;
+}
+.contact-form-title {
+  width: 100%;
+  display: block;
+  font-size: 30px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 43px;
+}
+
+
+.contact-btn{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
+}
+.wrap-input{
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+.contact-input {
+  display: block;
+  width:100%;
+  background: transparent;
+  color: #333333;
+  line-height: 1.2;
+  outline:none;
+}
+
+input.contact-input {
+  height: 60px;
+  padding: 0 20px 0 25px;
+  font-size: 20px;
+}
+
+textarea.contact-input {
+  min-height: 199px;
+  padding: 25px 20px 15px 25px;
+  font-size: 20px;
+  /*izbrisat ovo posli */
+}
+
+/* ----------------- when the input area is clicked -------  */
+.focus-input {
+  position: absolute;
+  display: block;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  pointer-events: none;
+  border: 1px solid #4CB04E;
+  border-radius: 2px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  -webkit-transform: scaleX(1.1) scaleY(1.3);
+  -moz-transform: scaleX(1.1) scaleY(1.3);
+  -ms-transform: scaleX(1.1) scaleY(1.3);
+  -o-transform: scaleX(1.1) scaleY(1.3);
+  transform: scaleX(1.1) scaleY(1.3);
+}
+
+.contact-input:focus + .focus-input {
+  visibility: visible;
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////// */
+
+
+/* RESPONSIVE PAGE */
+
+
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 600px) {
+  /* xs */
+
+  /*first page */
+  .rocker{
+    display:none;
+  }
+  .main{
+    height:860px;
+    /*razmislit o ovome*/
+    padding:60px 0;
+  
+  }
+  .h1-main{
+    margin-top: 9%;
+    text-align:center;
+    font-size: 35px;
+    line-height:49px;
+    
+  }
+  .h2-main{
+    margin-top:28px;
+    text-align:center;
+    font-size:18px;
+  }
+  .home-page-padding{
+    padding-left:15px;
+    padding-right:15px;
+  }
+    #button-main{
+      display:block;
+      margin:auto;
+    }
+  .rocker{
+    margin-right:30px;
+  }
+
+  .logo1{
+    /* margin-left:30px; */
+    display:none;
+  }
+  .logo2{
+    width:180px;
+    margin-left:20px;
+  }
+    .logo3{
+    display:none;
+  }
+
+  .home_mob{
+    width:330px;
+  }
+  #definition{
+    margin-top:10%;
+    padding:15px;
+  }
+
+  /* overllaping divs dropdown menu */
+ 
+ .wrapper, .toggle--active{
+   /* how to overlap? Set both divs value position:absolute; then 
+    the div which is after in the code will go on top (my case) */
+    position:absolute;
+  }
+
+ /*//////////////////////////// */
+ 
+  
+  .languages {
+    margin-left: 73%;
+  }
+  
+
+  /* ///////////////// /*/
+
+  #how-we-do-it {
+    height: 2100px;
+    margin-top: 10%;
+    
+  }
+  .how-we-do-it-height{
+    height:320px;
+  }
+  .best_experiences {
+    height:370px;
+  }
+  .img1{
+    margin-top:70px;
+
+  }
+  .how-does-it-look-img{
+    margin-top:10px;
+  }
+  #how-does-it-work {
+    height: 1200px;
+  }
+  .how-does-it-work-h12{
+    margin-bottom:60px;
+  }
+
+ 
+  .social-networks-logo {
+    display: block;
+    margin: auto;
+  }
+ 
+  .how-does-it-work-plus {
+    text-align: center;
+  }
+  /* Contact */
+  .wrap-contact{
+    padding: 73px 30px 60px 30px;
+  }
+  .container-contact{
+    margin-bottom:140px;
+  }
+  /*////////// FOOTER ////////////*/
+
+  #footer {
+    padding: 25px 15px;
+  }
+  .footer-all-rights{
+    margin-top:35px;
+    text-align:center;
+  }
+  .logo-footer{
+    display:block;
+    margin:auto;
+    margin-bottom:35px;
+  }
+  .footer-p {
+    margin-top: 15px;
+  }
+
+
+
+  /* ode pocinje mob-nav */
+
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  #mob-nav{
+    height:100px;
+  }
+  
+  .navicon {
+    width: 100%;
+    background: transparent;
+    display: block;
+    margin-left:auto;
+
+    /* privremeno ode */
+    margin-right:20px;
+    /*/////////////////// */
+    position: relative;
+    height: 30px;
+    width: 50px;
+    z-index: 99;
+    transition: linear 0.5s all;
+ }
+  .navicon:before, .navicon:after {
+    background: #fff;
+    backface-visibility: hidden;
+    content: "";
+    height: 3px;
+    left: 0;
+    transition: 0.8s ease;
+    width: 45px;
+ }
+  .navicon:before {
+    box-shadow: #fff 0 14px 0 0;
+    position: absolute;
+    top: 0;
+ }
+  .navicon:after {
+    position: absolute;
+    top: 28px;
+ }
+  .navicon--active {
+    transition: linear 0.5s all;
+ }
+  .navicon--active:before {
+    box-shadow: transparent 0 0 0 0;
+    top: 15px;
+    transform: rotate(225deg);
+ }
+  .navicon--active:after {
+    top: 15px;
+    transform: rotate(315deg);
+ }
+  .toggle {
+    /* background-color: rgba(255, 255, 255, .8); */
+
+    display: block;
+    opacity: 0;
+    transition: ease-in 0.5s all;
+    transform: translateY(-200%);
+ }
+  .toggle--active {
+    width:92%;
+    opacity: 1;
+    transition: ease-in 0.5s all;
+    transform: translateY(0);
+ }
+  .toggle__menu {
+    margin-bottom: 25px;
+ }
+  .accordion-menu {
+    width: 100%;
+    margin-top:-90px;
+    max-width: 350px;
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  .dropdownlink {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 45px;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    color: #212121;
+    position: relative;
+    transition: all 0.4s ease-out;
+  }
+  
+  .dropdownlink i {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+  }
+  .setLanguages{
+    padding: 15px 15px 15px 47px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  /* ode zavrsava */
+  
+
+
+  
+}
+
+@media screen and (min-width: 600px) and (max-width: 960px) {
+  /* sm */
+
+  /*first page */
+  /* hide the hamburger bar */
+  #mob-nav, .toggle, .logo2, .logo3{
+    display:none;
+  }
+  
+  .main{
+    padding: 60px 15px;
+    height:145vh;
+  }
+  .h1-main{
+    margin-top: 7%;
+    text-align:center;
+  }
+  .h2-main{
+    text-align:center;
+  }
+  #button-main{ 
+    display:block;
+    margin:auto;
+  }
+  .rocker{
+    margin-right:70px;
+  }
+  .logo1{
+    margin-left:70px;
+  }
+
+  .home_mob{
+    margin-top:70px;
+  }
+ 
+  /* ////////////////// */
+
+  #how-we-do-it {
+    height: 1240px;
+    margin-top: 9%;
+  }
+
+  #how-does-it-work {
+    padding-top:100px;
+    height: 1200px;
+    margin-top: 10%;
+  }
+  .how-does-it-work-h12{
+    margin-bottom:0px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-rows: 1fr 2fr;    
+  }
+  .how-does-it-work-plus {
+    text-align: center;
+  }
+  
+
+
+  /* footer */
+
+  #footer{
+    padding:15px 35px;
+  }
+  .footer-p{
+    display:inline-block;
+    padding-right:40px;
+  }
+  .grid-list{
+    display:grid;
+    grid-template-columns: 2fr 9fr;
+    margin-left:30px;
+  }
+  .logo-footer{
+    display:block;
+    margin-left:auto;
+    margin-right:40px;
+  }
+  
+  .footer-all-rights{
+    display:none;
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1264px) {
+  /* md */
+  /* hide the hamburger bar */
+  #mob-nav, .toggle, .logo2{
+    display:none;
+  }
+  .main{
+    padding: 60px 15px;
+    height:100vh;
+  }
+  .logos{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  .logo1{
+    margin-left:90px;
+  }
+  .logo3{
+    display:block;
+    margin-right:auto;
+    width:271px;
+    margin-top:10px;
+    margin-left:15px;
+  }
+  .h1-main{
+    margin-top: 7%;
+   
+  }
+  .rocker{
+    margin-right:90px;
+  }
+  #definition{
+ 
+    margin-left:90px;
+    margin-top:55px;
+  }
+
+
+  #how-we-do-it {
+    height: 800px;
+    margin-top: 1%;
+    padding-left:30px;
+    padding-right:30px;
+  }
+  .how-we-do-it-height{
+    height:330px;
+  }
+  #how-does-it-work {
+    height: 425px;
+    margin-top:7%;
+  }
+  .how-does-it-look-img{
+    margin-top:9%;
+    
+  }
+  
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+  }
+  .layout123{
+    padding-right:40px;
+  }
+  .how-does-it-work-plus {
+    text-align: center;
+  }
+  .how-does-it-work-h12{
+    margin-bottom:90px;
+  }
+  /*foooter*/
+
+  #footer{
+    padding:15px 35px;
+  }
+  .footer-p{
+    display:inline-block;
+    padding-right:40px;
+  }
+  .grid-list{
+    display:grid;
+    grid-template-columns: 2fr 9fr;
+    margin-left:30px;
+  }
+  .logo-footer{
+    display:block;
+    margin-left:auto;
+    margin-right:40px;
+  }
+  
+
+ 
+  
+}
+@media screen and (min-width: 1264px) and (max-width: 1904px) {
+  /* lg */
+  /* hide the hamburger bar */
+  #mob-nav, .toggle, .logo2{
+    display:none;
+  }
+  .main{
+    padding: 60px 15px;
+    height:100vh;
+  }
+  .logos{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  .logo1{
+    margin-left:90px;
+  }
+
+  .logo3{
+    margin-top:10px;
+    width:271px;
+    margin-left:15px;
+  
+  }
+  .rocker{
+    margin-right:90px;
+  }
+  .h1-main{
+    margin-top: 7%;
+  }
+  #definition{
+    margin-left:90px;
+    margin-top:45px;
+  }
+
+  #how-we-do-it {
+    height: 700px;
+    margin-top: 2%;
+    padding-left:30px;
+    padding-right:30px;
+  }
+ 
+  /* HOW DOES IT WORK SECTION */
+
+  #how-does-it-work {
+    height: 425px;
+    margin-top: 15%;
+  }
+  .how-does-it-work-h12{
+    margin-bottom:90px;
+  }
+  .how-does-it-look-img{
+    margin-top:9%;
+    
+  }
+  .how-does-it-work-plus {
+    text-align: center;
+  }
+  .layout123{
+    padding-right:50px;
+
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+  }
+  /* Footer */
+ .footer-p{
+    display:inline-block;
+    padding-right:40px;
+  }
+  .grid-list{
+    display:grid;
+    grid-template-columns: 2fr 9fr;
+    margin-left:30px;
+  }
+  .logo-footer{
+    display:block;
+    margin-left:auto;
+    margin-right:40px;
+  }
+  
+  #footer{
+    padding:15px 35px;
+  }
+
+  
+ 
+
+}
+@media (min-width: 1904px) {
+  /* xl */
+  /* hide the hamburger bar */
+  #mob-nav,.toggle, .logo2{
+    display:none;
+  }
+  .main{
+    padding: 60px 15px;
+    height:100vh;
+  }
+  .rocker{
+    margin-right:90px;
+  }
+  #definition{
+    margin-left:90px;
+    margin-top:70px;
+  }
+  .logo1{
+    margin-left:90px;
+  }
+  .logo3{
+    margin-top:5px;
+    width:350px;
+    padding-left:20px;
+    margin-left:15px;
+  }
+  #how-we-do-it {
+    height: 600px;
+    margin-top: 13%;
+  }
+ 
+  #how-does-it-work {
+    height: 600px;
+    margin-top: 13%;
+  }
+  .how-does-it-work-h12{
+    margin-bottom:90px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  .how-does-it-work-plus {
+    text-align: center;
+  }
+  /* footer */
+  #footer{
+    padding:15px 35px;
+  }
+  .footer-p{
+    display:inline-block;
+    padding-right:40px;
+  }
+  .grid-list{
+    display:grid;
+    grid-template-columns: 2fr 9fr;
+    margin-left:30px;
+  }
+  .logo-footer{
+    display:block;
+    margin-left:auto;
+    margin-right:40px;
+  }
+
+}
+
+
+
+
+
+
